@@ -35,8 +35,8 @@ public class PluginClassLoader extends URLClassLoader {
 
     @Override
     public Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {
-        if (PROTECTED.stream().anyMatch(p -> p.test(name)))
-            throw new ClassNotFoundException(name + " is a protected class");
+//        if (PROTECTED.stream().anyMatch(p -> p.test(name)))
+//            throw new ClassNotFoundException(name + " is a protected class");
 
         return super.loadClass(name, resolve);
     }
